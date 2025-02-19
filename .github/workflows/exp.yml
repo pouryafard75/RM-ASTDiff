@@ -1,0 +1,13 @@
+name: Exp
+
+on:
+  repository_dispatch:
+    types: [deploy]
+
+
+jobs:
+  push_to_docker_hub:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        run: echo "Checkout Repository"
