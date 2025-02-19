@@ -15,7 +15,7 @@ on:
 
 jobs:
   build:
-
+    if: (github.repository == 'tsantalis/RefactoringMiner')
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -70,7 +70,9 @@ jobs:
 #        token: ${{ secrets.GIST_TOKEN }}
 
   docker_build:
-    needs: [build]
+    permissions:
+      contents: write
+#    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: dispatch docker build
