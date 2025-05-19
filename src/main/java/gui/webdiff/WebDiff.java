@@ -39,7 +39,11 @@ public class WebDiff  {
     public static final String HIGHLIGHT_JAVA_URL = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js";
     public int port = 6789;
 
-    private final String toolName = "RefactoringMiner";
+    private String toolName = "RefactoringMiner";
+
+    public void setToolName(String toolName) {
+        this.toolName = toolName;
+    }
 
     public void setPort(int port) {
         this.port = port;
