@@ -21,20 +21,42 @@ import java.util.stream.Collectors;
 /* Created by pourya on 2025-02-12*/
 public class WebExporter {
     final WebDiff webDiff;
-    final String baseURL = "http://127.0.0.1";
-    final String resourcePath = "src/main/resources/";
-    final Set<String> viewers_path = Set.of(
+    String baseURL = "http://127.0.0.1";
+    String resourcePath = "src/main/resources/";
+    Set<String> viewers_path = Set.of(
             "monaco-page",
             "vanilla-diff"
     );
-    final Set<String> otherPages = Set.of(
+    Set<String> otherPages = Set.of(
             "singleView",
             "list"
     );
+    String baseFolder = "web";
+    String resourceFolderNameInFinalExport = "resources";
 
-    final String baseFolder = "web";
-    final String resourceFolderNameInFinalExport = "resources";
+    public void setBaseURL(String baseURL) {
+        this.baseURL = baseURL;
+    }
 
+    public void setResourcePath(String resourcePath) {
+        this.resourcePath = resourcePath;
+    }
+
+    public void setViewers_path(Set<String> viewers_path) {
+        this.viewers_path = viewers_path;
+    }
+
+    public void setOtherPages(Set<String> otherPages) {
+        this.otherPages = otherPages;
+    }
+
+    public void setBaseFolder(String baseFolder) {
+        this.baseFolder = baseFolder;
+    }
+
+    public void setResourceFolderNameInFinalExport(String resourceFolderNameInFinalExport) {
+        this.resourceFolderNameInFinalExport = resourceFolderNameInFinalExport;
+    }
 
     public WebExporter(WebDiff webDiff) {
         this.webDiff = webDiff;
