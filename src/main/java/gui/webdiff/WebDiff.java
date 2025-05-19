@@ -37,9 +37,13 @@ public class WebDiff  {
     public static final String HIGHLIGHT_CSS_URL = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css";
     public static final String HIGHLIGHT_JS_URL = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js";
     public static final String HIGHLIGHT_JAVA_URL = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js";
-    public final int port = 6789;
+    public int port = 6789;
 
     private final String toolName = "RefactoringMiner";
+
+    public void setPort(int port) {
+        this.port = port;
+    }
 
     private final ProjectASTDiff projectASTDiff;
     private final String resourcesPath = "/web/";
